@@ -1,37 +1,38 @@
 <%# include relative path to the partials file %>
 <% include ../partials/header.ejs  %>
 
-<h1>NEW STUDENT FORM</h1>
+<h1>Form for New Student</h1>
 
 <form method="post" action="/students">
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="name" class="form-control" id="name" placeholder="Name" name = 'studentName'>
-  </div>
-  <label>
-    <input type="radio" name="gender" value="male" name = gender>
-    Male
-  </label>
-  <label>
-    <input type="radio" name="gender" value="female" checked name = gender>
-    Female
-  </label>
-  <div class="form-group">
-    <label for="contact">Contact</label>
-    <input type="contact" class="form-control" id="contact" placeholder="Contact" name = 'studentContact'>
+    <input type="name" class="form-control" id="name" placeholder="Name" name="studentName">
   </div>
   <div class="form-group">
     <label for="address">Address</label>
-    <input type="address" class="form-control" id="address" placeholder="Address" name = 'studentAddress'>
+    <input type="address" class="form-control" id="address" placeholder="Address" name="studentAddress">
   </div>
   <div class="form-group">
+    <label for="contact">Contact</label>
+    <input type="contact" class="form-control" id="contact" placeholder="Contact" name="studentContact">
+  </div>
+  <label class="radio-inline">
+    <input type="radio" value="male" name="gender">
+    Male
+  </label>
+  <label class="radio-inline">
+    <input type="radio" value="female" name="gender">
+    Female
+  </label>
+  <div class="form-group">
     <label for="parentName">Parent's name</label>
-    <input type="name" class="form-control" id="parentName" placeholder="Parent's Name" name = 'parentName'>
+    <input type="name" class="form-control" id="parentName" placeholder="Parent's Name" name="parentName">
   </div>
   <div class="form-group">
     <label for="parentContact">Classes</label>
-    <input type="contact" class="form-control" id="contact" placeholder="Parent's Contact" name = 'parentContact'>
+    <input type="contact" class="form-control" id="contact" placeholder="Parent's Contact" name="parentContact">
   </div>
-    <input type="submit">
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>
+
 <% include ../partials/footer.ejs  %>
